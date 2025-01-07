@@ -23,11 +23,12 @@ Denormalization
 - Data redundancy acceptable for better performance.
 
 BASIC SQL COMMANDS					
-Data Definition Language (DDL): CREATE, ALTER, DROP 					
-Data Manipulation Language (DML): SELECT, INSERT, UPDATE, DELETE
-Data Control Language (DCL): GRANT, REVOKE                                                          
-Transaction Control Language (TCL): BEGIN, COMMIT, ROLLBACK 
+- Data Definition Language (DDL): CREATE, ALTER, DROP 					
+- Data Manipulation Language (DML): SELECT, INSERT, UPDATE, DELETE
+- Data Control Language (DCL): GRANT, REVOKE                                                          
+- Transaction Control Language (TCL): BEGIN, COMMIT, ROLLBACK
+  
 WINDOW FUNCTIONS: ROW_NUMBER(), RANK(), DENSE_RANK()
-The LAG() function is used to get value from the row that precedes the current row.
-The LEAD() function is used to get value from a row that succeeds the current row.
-The NTILE() function in SQL server is used to distribute rows of an ordered partition into a specified number of approximately equal groups, or buckets.
+- The LAG() function is used to get value from the row that precedes the current row.
+- The LEAD() function is used to get value from a row that succeeds the current row.
+- The NTILE() function in SQL server is used to distribute rows of an ordered partition into a specified number of approximately equal groups, or buckets.
