@@ -1,4 +1,4 @@
-# SQL-Training (only whats not known)
+# SQL-Training 
 
 HISTORY AND EVOLUTION OF DATABASE
 - Early Data Storage (Pre-1960s)
