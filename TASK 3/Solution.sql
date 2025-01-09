@@ -55,3 +55,28 @@ INSERT INTO accounts_items (account_id, item_id, quality) VALUES
 (2, 3, 'common'),
 (2, 6, 'common');
 
+SELECT a.username, i.type, ai.quality, i.name FROM accounts_items AS ai
+JOIN accounts as a ON a.id=ai.account_id
+JOIN items AS ai.item_id = i.id
+WHERE ai.quality = (
+    SELECT ai_sub.quality FROM accounts_items AS ai_sub 
+    JOIN items AS i_sub ON ai_sub.item_id = i_sub.id
+    WHERE ai_sub.account_id = ai.account_id AND i_sub.type = i.type
+    ORDER BY 
+        CASE 
+            WHEN ai_sub.quality = 'epic' THEN 1
+            WHEN ai_sub.quality = 'common' THEN 2
+            WHEN ai_sub.quality = 'rare' THEN 3
+        END
+    LIMIT 1
+)
+ORDER BY a.username, 
+    CASE 
+        WHEN i.type = 'armor' THEN 1
+        WHEN i.type = 'sheild' THEN 2
+        WHEN i.type = 'sword' THEN 3
+    END;
+
+
+
+    
